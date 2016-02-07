@@ -1,0 +1,550 @@
+@import "normalize";
+
+/*---------- fonts --------*/
+@import "../../fonts/font-awesome-4.4.0/css/font-awesome.min.css";
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaRegular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaSemibold.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaBold.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaExtrabold.otf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaBlack.otf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaRegularItalic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaSemiboldItalic.otf');
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url('../../fonts/ProximaNovaBoldItalic.otf');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'gothampro';
+  src: url('../../fonts/GothamProMed_0.otf');
+}
+
+
+@font-face {
+  font-family: 'alsrubl';
+  src: url('../../fonts/ALSRubl.otf');
+}
+/*------------ End of fonts-----------*/
+
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  font-family: 'proximanova', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+p {
+  line-height: 30px;
+  text-align: justify;
+  margin: 30px 0;
+
+}
+
+h1, h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0;
+  color: #333;
+}
+
+.text-bg {
+  background-color: #f3f3f3;
+}
+
+.blankForm {
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/*-----------Buttons-------------*/
+.btn {                             /*geometry and dimensions*/
+  display: inline-block;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 20px;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;          /* Вот это мешало в blockSearch нормально выровнять кнопки. Здесь пока не трогаю*/
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  &_default {                     /*colors*/
+    color: #1a1a1a;
+    background-color: #fff;
+    border-color: #dedede;
+  }
+
+  &_primary {
+    color: #fff;
+    background-color: #29acbe;
+    border-color: #29acbe;
+  }
+
+  &_secondary {
+    color: #29acbe;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  &_green {
+    color: #fff;
+    background-color: #48e6d2;
+    border-color: #48e6d2;
+  }
+
+  &_warning {
+    color: #fff;
+    background-color: #ebb931;
+    border-color: #ebb931;
+  }
+
+  &_danger {
+    color: #fff;
+    background-color: #ff000e;
+    border-color: #ff000e;
+  }
+
+  &_prop {                     /*Propositions buttons*/
+    height: 33px;
+    font-size: 14px;
+  }
+
+  &_arrow {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+  }
+  &_arrow.btn_primary {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      margin-top: -@illustrationsbtn-primary-height/2;
+      margin-left: -@illustrationsbtn-primary-width/2;
+      top: 50%;
+      left: 50%;
+      .sprite(@illustrationsbtn-primary)
+    }
+  }
+  &_arrow.btn_secondary {
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      margin-top: -@illustrationsbtn-secondary-height/2;
+      margin-left: -@illustrationsbtn-secondary-width/2;
+      top: 50%;
+      left: 50%;
+      .sprite(@illustrationsbtn-secondary)
+    }
+  }
+
+}
+/*-----------End of Buttons-------------*/
+
+
+/*-----------Forms-------------*/
+.searchBar {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  vertical-align: top;
+  font-size: 15px;
+  input::-webkit-input-placeholder {   /*--------------Placeholders for searchBar-------------*/
+
+    color:    #c4c4c4;
+  }
+  input:-moz-placeholder {
+    color:    #c4c4c4;
+    font-weight: 600;
+  }
+  input::-moz-placeholder {
+    color:    #c4c4c4;
+    font-weight: 600;
+  }
+  input:-ms-input-placeholder {
+    color:    #c4c4c4;
+  }
+
+  input[type=text] {
+    width: 100%;
+    height: 100%;
+    padding: 0 57px 0 20px;
+    border: none;
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  button {
+    height: 100%;
+    width: 57px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    .sprite(@icon-search)
+  }
+
+}
+
+.select {
+  position: relative;
+  width: 251px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 600;
+  select {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    appearance: none;
+    z-index: 1;
+  }
+  &:before {
+    content: '\f0d7';
+    font-family: FontAwesome, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.checkbox {
+  &_root {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  &_string {
+  }
+  &_input {
+    display: none;
+  }
+  &_label {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    padding-left: 26px;
+    color: #808080;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      .sprite(@checkbox);
+    }
+  }
+  &_input:checked + &_label {
+    color: #333;
+  }
+  &_input:checked + &_label:before {
+    .sprite(@checkbox-checked);
+  }
+}
+
+.formRange {
+  position: relative;
+  height: 17px;
+  padding: 5px 8px 0;
+  box-sizing: border-box;
+  &:before {
+    top: 5px;
+    position: absolute;
+    width: 100%;
+    display: block;
+    content: '';
+    background: #e6e6e6;
+    height: 7px;
+    margin: 0 -8px;
+    border-radius: 2px;
+  }
+  .ui-slider {
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    height: 7px;
+    .ui-slider-handle {
+      cursor: pointer;
+      border-radius: 50%;
+      top: -5px;
+      margin-left: -8px;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      background: #f2f2f2;
+      box-shadow: 0 0 4px #bebebe;
+      touch-action: none;
+      outline: none;
+      z-index: 2;
+    }
+    .ui-slider-range {
+      top: 0;
+      background: #d4d4d4;
+      height: 7px;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
+.inputText {
+  display: inline-block;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+input::-webkit-input-placeholder {   /*--------------Placeholders-------------*/
+
+  color:    #333;
+}
+input:-moz-placeholder {
+  color:    #333;
+}
+input::-moz-placeholder {
+  color:    #333;
+}
+input:-ms-input-placeholder {
+  color:    #333;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-size: 15px;
+  resize: none;
+}
+
+
+/*-----------End of Forms-------------*/
+
+
+
+
+@media (min-width: 768px) and (max-width: 1019px) {   /*========== 768 ===== 1019 ==========*/
+
+  body {
+    font-size: 17px;
+  }
+
+  p {
+    line-height: 32px;
+  }
+
+  h1, h2 {
+    font-size: 35px;
+  }
+
+  .btn, .searchBar, .select {
+    height: 50px;
+    font-size: 17px;
+    select {
+      height: 50px;
+    }
+  }
+
+  .btn {
+    line-height: 48px;
+  }
+
+  .btn_prop, .btn_best {              /*btn_best from bestsellers (Хиты продаж) По идее должны описываться непосредственно в этих компонентах*/
+    height: 43px;
+    line-height: 41px;
+  }
+
+  .searchBar {
+    height: 50px;
+
+    button {
+      width: 62px;
+    }
+
+    input {
+      padding-right: 62px;
+    }
+
+    &:before {
+      top: 14px;
+      .sprite(@icon-search-big)
+    }
+ }
+
+  .select {
+    line-height: 50px;
+    span {
+      font-size: 16px;
+      right: 20px;
+    }
+  }
+
+  textarea {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {         /*=============== 768 ===============*/
+
+  body {
+    font-size: 13px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+    margin: 20px 0 15px;
+  }
+
+  p {
+    line-height: 23px;
+    margin: 15px 0;
+  }
+
+  .btn, .searchBar, .select {
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .btn {
+    line-height: 33px;
+    padding: 0 10px;
+  }
+
+  .select {
+    line-height: 35px;
+    padding: 0;
+    select{
+      padding: 0 10px;
+      height: 35px;
+    }
+  }
+
+  .searchBar {
+    input {
+      padding: 0 37px 0 10px;
+    }
+
+    button {
+      width: 37px;
+    }
+
+    &:before {
+      top: 11px;
+      right: 12px;
+      .sprite(@icon-search-min)
+    }
+  }
+
+  .btn_prop, .btn_best {              /*btn_best from bestsellers (Хиты продаж)*/
+    padding: 0 15px;
+  }
+
+  textarea {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+
+

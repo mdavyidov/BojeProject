@@ -1,0 +1,26 @@
+mixin mainSlider_slide()
+  li.mainSlider_slide
+    .mainSlider_picture.mainSlider_picture_s(style="background-image: url(../images/mainSlider/slide01-s.jpg)")
+    .mainSlider_picture.mainSlider_picture_l(style="background-image: url(../images/mainSlider/slide01-l.jpg)")
+    .shell_row
+      .shell_col
+        .mainSlider_content
+          .mainSlider_title
+            | Зимняя 
+            br
+            | распродажа
+          | Успейте приобрести серьги 
+          br
+          | из белого золота в BOJE
+          .mainSlider_button_s
+            button.btn_arrow.btn_primary
+          .mainSlider_button_l
+            button.btn.btn_primary Узнать больше
+            
+.mainSlider_root.baseSlider
+  .mainSlider_container
+    ul.mainSlider_list(data-slider="mainSlider")
+      +mainSlider_slide()
+      +mainSlider_slide()
+      +mainSlider_slide()
+      +mainSlider_slide()

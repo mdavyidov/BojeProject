@@ -1,0 +1,20 @@
+mixin layout(variable)
+  if variable == 'grey'
+    .layout_container.layout_containerGrey
+      .layout_row
+        block
+  else if variable == 'dark'
+    .layout_container.layout_containerDark
+      .layout_row
+        block
+  else if variable == 'twoCol'
+    .layout_container.layout_containerDark
+      .layout_twoCol
+        .layout_side
+          block side
+        .layout_cont
+          block cont
+  else
+    .layout_container
+      .layout_row
+        block

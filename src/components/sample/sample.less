@@ -1,0 +1,347 @@
+.sample {
+  &_root {
+    width: 100%;
+    text-align: justify;
+    font-size: 0;
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+      vertical-align: top;
+    }
+    .btn {
+      font-size: 14px;
+      padding: 4px 20px 4px 20px;
+      border-radius: 4px;
+      height: 34px;
+      line-height: 0;
+    }
+    .btn_primary {
+      &:after {
+        display: none;
+      }
+    }
+    .btn_secondary {
+      &:after{
+        display: none;
+      }
+    }
+    .btn_arrow {
+      display: none;
+    }
+  }
+  &_title {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    font-weight: 800;
+  }
+  &_description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #A6A6A6;
+    height: 74px;
+    font-weight: 400;
+  }
+  &_section.sample_sectionDouble {
+    width: 797px;
+    height: 319px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: left;
+    vertical-align: top;
+  }
+  &_section {
+    width: 383px;
+    height: 319px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: left;
+    margin-bottom: 20px;
+    vertical-align: top;
+  }
+  &_childrens {
+    background: url('../../images/childrens.png') no-repeat;
+    background-size: cover;
+  }
+  &_contentChildren{
+    width: 234px;
+    margin: 67px 0 0 49px;
+  }
+  &_gold {
+    background: url('../../images/gold.png') no-repeat;
+    background-size: cover;
+  }
+  &_contentGold {
+    width: 110px;
+    margin: 67px 0 0 43px;
+  }
+  &_titleGold {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #FFF;
+    margin-bottom: 14px;
+    font-weight: 800;
+  }
+  &_descriptionGold {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFF;
+    height: 74px;
+    font-weight: 400;
+  }
+  &_silver {
+    background: url('../../images/silver.png') no-repeat;
+    background-size: cover;
+  }
+  &_contentSilver {
+    width: 148px;
+    margin: 68px 0 0 43px;
+  }
+  &_collection {
+    background: url('../../images/collection.png') no-repeat;
+    background-size: cover;
+  }
+  &_contentCollection {
+    width: 234px;
+    margin: 67px 0 0 49px;
+    .sample_description {
+      height: 67px;
+    }
+  }
+}
+
+
+
+@media (min-width: 1020px) and (max-width: 1299px) {
+  .sample {
+    &_description {
+      height: 85px;
+    }
+    &_section.sample_sectionDouble {
+      width: 577px;
+    }
+
+    &_childrens {
+      background: url('../../images/childrens980.png') no-repeat;
+    }
+
+    &_gold {
+      background: url('../../images/gold.png') no-repeat;
+    }
+    &_descriptionGold {
+      height: 85px;
+    }
+
+    &_silver {
+      background: url('../../images/silver.png') no-repeat;
+    }
+
+    &_ollection {
+      background: url('../../images/collection980.png') no-repeat;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .sample {
+    &_root {
+      width: auto;
+      margin: 0 -25px 14px;
+      text-align: center;
+      &:after {
+        display: none;
+      }
+      .btn {
+        height: 42px;
+        font-size: 17px;
+        padding-top: 4px;
+      }
+    }
+    &_title {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    &_description {
+      font-size: 17px;
+      margin-bottom: 4px;
+      height: 64px;
+    }
+    &_section.sample_sectionDouble {
+      width: 50%;
+      height: 284px;
+      margin-bottom: 0;
+    }
+    &_section {
+      width: 50%;
+      height: 284px;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    &_childrens {
+      margin-left: -25px;
+      background: url('../../images/childrens768.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentChildren {
+      width: 286px;
+      margin: 0;
+      padding: 46px 0 0 40px;
+    }
+    &_gold {
+      margin-right: -25px;
+      background: url('../../images/gold768.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentGold {
+      width: 131px;
+      margin: 0;
+      padding: 46px 0 0 40px;
+      .btn {
+        font-size: 17px;
+      }
+    }
+    &_titleGold {
+      font-size: 22px;
+      height: 70px;
+      margin-bottom: 4px;
+
+    }
+    &_descriptionGold {
+      font-size: 17px;
+      margin-bottom: 4px;
+      height: 64px;
+    }
+    &_silver {
+      margin-left: -25px;
+      background: url('../../images/silver768.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentSilver {
+      width: 170px;
+      margin: 46px 0 0 40px;
+    }
+    &_collection {
+      margin-right: -25px;
+      background: url('../../images/collection768.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentCollection {
+      width: 284px;
+      margin: 46px 0 0 40px;
+      .sample_description {
+        font-size: 17px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sample {
+    &_root {
+      position: relative;
+      font-size: 0;
+      text-align: center;
+      &:after {
+        display: none;
+      }
+      .btn {
+        display: none;
+      }
+      .btn_primary {
+        &:after {
+          display: block;
+        }
+      }
+      .btn_secondary {
+        &:after{
+          display: block;
+        }
+      }
+      .btn_arrow  {
+        display: inline-block;
+      }
+    }
+    &_title {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    &_description {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #A6A6A6;
+      height: 54px;
+    }
+
+    &_section.sample_sectionDouble {
+      width: 100%;
+      height: 319px;
+      display: none;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+
+    &_section {
+      display: block;
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      text-align: left;
+      margin-bottom: 10px;
+      vertical-align: top;
+      font-weight: 400;
+    }
+
+    &_childrens {
+      display: inline-block !important;
+      height: 200px !important;
+      width: 100% !important;
+      background: #ffffff url('../../images/childrens320.png') no-repeat;
+      background-size: cover;
+    }
+
+    &_contentChildren{
+      width: 100%;
+      margin: 0;
+      padding: 19px 0 0 24px;
+    }
+
+    &_gold {
+      height: 200px;
+      width: 100%;
+      background: #1eacbe url('../../images/gold320.png') no-repeat;
+      background-size: cover;
+    }
+
+    &_contentGold {
+      width: 110px;
+      margin: 0;
+      padding: 19px 0 0 24px;
+    }
+    &_titleGold {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    &_descriptionGold {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #FFF;
+      height: 54px;
+      font-weight: 400;
+    }
+
+    &_silver {
+      display: none;
+    }
+
+    &_collection {
+      display: none;
+    }
+  }
+}

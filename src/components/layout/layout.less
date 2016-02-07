@@ -1,0 +1,151 @@
+.layout_container {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  background: #fff;
+  &Grey {
+    background: #f3f3f3;
+  }
+  &Dark {
+    background: #333333;
+  }
+}
+
+.layout_row {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  transition: all .3s linear;
+}
+
+//layout_twoCol__active
+
+.layout {
+  &_twoCol {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 0;
+  }
+  &_side {
+    display: inline-block;
+    float: left;
+    width: 277px;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 10;
+    transition: all .3s linear;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &_cont {
+    display: inline-block;
+    position: relative;
+    width: 891px;
+    padding-left: 32px;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1299px) {
+  .layout_row {
+    width: 980px;
+  }
+  .layout {
+    &_twoCol {
+      width: 980px;
+    }
+    &_side {
+      width: 230px;
+    }
+    &_cont {
+      width: 728px;
+      padding-left: 22px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .layout_row {
+    width: 100%;
+  }
+  .layout {
+    &_twoCol {
+      width: 100%;
+    }
+    &_side {
+      position: fixed;
+      height: 100%;
+      width: 522px;
+      left: -522px;
+      padding: 0 100px 0 122px;
+      background: #fafafa;
+    }
+    &_cont {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 25px;
+    }
+  }
+  body.menuOpened {
+    .layout_side {
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+    .layout_cont {
+      margin-left: 100px;
+    }
+    .layout_row {
+      left: 522px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .layout_row {
+    width: 100%;
+    min-width: 320px;
+  }
+  .layout {
+    &_twoCol {
+      width: 100%;
+    }
+    &_side {
+      position: fixed;
+      height: 100%;
+      width: 264px;
+      left: -264px;
+      padding: 0 40px 0 30px;
+      background: #fafafa;
+    }
+    &_cont {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  body.menuOpened {
+    .layout_side {
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+    .layout_cont {
+      margin-left: 100px;
+    }
+    .layout_row {
+      left: 264px;
+    }
+  }
+}

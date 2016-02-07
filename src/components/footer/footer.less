@@ -1,0 +1,137 @@
+.footer {
+  position: relative;
+  height: 39px;
+  padding: 21px 0 0;
+  border-top: 1px solid #4d4d4d;
+  text-align: justify;
+  margin: 0 -20px;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 100%;
+  }
+
+  &_copyrightBox{
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  &_copyright {
+    display: inline-block;
+    font-size: 13px;
+    color: #FFFFFF;
+  }
+
+  &_address {
+    display: none;
+    margin-left: 26px;
+    font-size: 13px;
+    color: #808080;
+  }
+
+  &_info {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &_siteMap {
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 13px;
+    color: #808080;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &_lang {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+    color: #808080;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.footer_lang__active {
+      color: #48e6d2;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1299px) {
+  .footer{
+    height: 97px;
+
+    &_address {
+      display: inline-block;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .footer {
+    height: 70px;
+    margin: 0;
+
+    &_copyrightBox{
+      margin-left: 38px;
+    }
+
+    &_info {
+      margin-right: 5px;
+    }
+
+    &_copyright {
+      font-size: 16px;
+    }
+
+    &_siteMap {
+      font-size: 16px;
+      margin-right: 25px;
+    }
+
+    &_lang {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: 49px;
+    margin: 0;
+    padding: 21px 0 0;
+
+    &_copyrightBox{
+      margin-left: 12px;
+    }
+
+    &_info {
+      margin-right: 5px;
+    }
+
+    &_copyright {
+      font-size: 13px;
+    }
+
+    &_siteMap {
+      font-size: 13px;
+      margin-right: 25px;
+    }
+
+    &_lang {
+      font-size: 13px;
+      margin-left: 12px;
+    }
+  }
+}

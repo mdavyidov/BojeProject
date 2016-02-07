@@ -1,0 +1,422 @@
+.overview {
+  &_root {
+    position: relative;
+    height: 588px;
+    background: #ffffff;
+    margin-bottom: 41px;
+    padding: 24px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  &_top {
+    padding: 10px 18px;
+    font-size: 0;
+  }
+  &_titleBox {
+    display: inline-block;
+    width: 550px;
+    vertical-align: top;
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 28px;
+    color: #333333;
+    span {
+      text-transform: uppercase;
+    }
+  }
+  &_description {
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #bfbfbf;
+    line-height: 1;
+  }
+  &_topCostBox {
+    display: none;
+    width: 240px;
+    padding: 44px 10px 0 0;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  &_topCost {
+    font-family: 'gothampro-med', sans-serif;
+    font-size: 40px;
+    color: #1a1a1a;
+    span {
+      font-size: 34px;
+      color: #333333;
+      margin-left: 4px;
+      font-family: 'alsrubl', sans-serif;
+    }
+  }
+  &_topDescription {
+    font-weight: 600;
+    font-size: 17px;
+    color: #bfbfbf;
+  }
+  &_titleLink {
+    display: inline-block;
+    margin-left: 4px;
+    border-bottom: 1px dotted #48e6d2;
+    color: #48e6d2;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px dotted rgba(0, 0, 0, 0);
+    }
+  }
+  &_articleBox {
+    display: inline-block;
+    width: 188px;
+    margin-top: 14px;
+    vertical-align: top;
+  }
+  &_article {
+    display: inline-block;
+    width: 188px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #bfbfbf;
+    text-align: right;
+  }
+  &_articleDescription {
+    display: none;
+  }
+  &_content {
+    font-size: 0;
+  }
+  &_col {
+    display: inline-block;
+    position: relative;
+    height: 456px;
+    width: 132px;
+    padding: 18px 18px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    &Title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 13px;
+      vertical-align: top;
+    }
+    &ImgBox {
+      height: 94px;
+      width: 94px;
+      margin-bottom: 20px;
+      border: 1px solid #bfbfbf;
+      border-radius: 3px;
+      opacity: .5;
+      vertical-align: top;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &Link {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 8px 0;
+      box-sizing: border-box;
+    }
+    &Img {
+      display: block;
+      height: 80px;
+      max-width: 80px;
+      margin: 0 auto;
+    }
+    &SearchBox {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 18px;
+      height: 40px;
+      width: 100%;
+      vertical-align: bottom;
+    }
+    &SearchLink {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 0;
+        .sprite(@icon-search-big)
+      }
+    }
+  }
+  &_imgBox {
+    display: inline-block;
+    width: 510px;
+    padding: 18px 15px;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  &_img {
+    display: block;
+    height: 420px;
+    max-width: 480px;
+  }
+}
+@media (max-width: 1299px) {
+  .overview {
+    &_root {
+      margin-bottom: 41px;
+    }
+    &_top {
+      padding: 10px 0 10px 18px;
+    }
+    &_titleBox {
+      width: 426px;
+    }
+    &_articleBox {
+      width: 160px;
+    }
+    &_article {
+      width: 160px;
+    }
+    &_col {
+      height: 456px;
+      width: 94px;
+      padding: 18px 10px 0;
+      &Title {
+        margin-bottom: 17px;
+      }
+      &ImgBox {
+        height: 72px;
+        width: 72px;
+        margin-bottom: 15px;
+      }
+      &Link {
+        padding: 6px 0;
+      }
+      &Img {
+        height: 60px;
+        max-width: 60px;
+      }
+      &SearchBox {
+        right: 10px;
+      }
+    }
+    &_imgBox {
+      height: 456px;
+      width: 416px;
+      padding: 18px 8px;
+    }
+    &_img {
+      height: 420px;
+      max-width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .overview {
+    &_root {
+      height: auto;
+      margin: 0 -25px;
+      padding: 25px;
+      border-radius: 0;
+    }
+    &_top {
+      padding: 21px 0 10px 18px;
+    }
+    &_titleBox {
+      width: 60%;
+      box-sizing: border-box;
+    }
+    &_title {
+      font-size: 35px;
+      span {
+        display: block;
+        margin-top: 14px;
+      }
+    }
+    &_description {
+      font-size: 17px;
+    }
+    &_topCostBox {
+      display: inline-block;
+      width: 40%;
+      text-align: right;
+    }
+    &_articleBox {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      margin-top: 8px;
+      padding: 0 25px;
+      box-sizing: border-box;
+      text-align: right;
+    }
+    &_article {
+      display: inline-block;
+      width: auto;
+      padding-right: 2px;
+      font-size: 14px;
+    }
+    &_col {
+      display: block;
+      height: auto;
+      width: 100%;
+      padding: 26px 10px 0;
+      text-align: center;
+      &Title {
+        display: block;
+        width: 100%;
+        margin-bottom: 9px;
+        font-size: 17px;
+        text-align: center;
+      }
+      &ImgBox {
+        display: inline-block;
+        height: 93px;
+        width: 93px;
+        margin: 0 10px;
+      }
+      &Link {
+        padding: 6px 0;
+      }
+      &Img {
+        height: 81px;
+        max-width: 81px;
+      }
+      &SearchBox {
+        display: none;
+      }
+    }
+    &_colSide {
+      display: none;
+    }
+    &_imgBox {
+      display: block;
+      height: 493px;
+      width: 100%;
+      padding: 18px 0 0;
+    }
+    &_img {
+      height: 475px;
+      max-width: 552px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .overview {
+    &_root {
+      height: auto;
+      margin: 0 -20px;
+      padding: 20px;
+      border-radius: 0;
+    }
+    &_top {
+      padding: 26px 0 5px;
+    }
+    &_titleBox {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    &_title {
+      font-size: 20px;
+      span {
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+    &_description {
+      font-size: 13px;
+    }
+    &_topCostBox {
+      display: block;
+      width: 100%;
+      padding-top: 13px;
+      text-align: left;
+    }
+    &_articleBox {
+      margin-top: 14px;
+      padding: 0 20px;
+    }
+    &_article {
+      padding-right: 0;
+      font-size: 12px;
+    }
+    &_articleDescription {
+      display: inline-block;
+      float: left;
+      font-weight: 600;
+      font-size: 13px;
+      color: #bfbfbf;
+    }
+    &_topCost {
+      font-size: 25px;
+      span {
+        font-size: 20px;
+      }
+    }
+    &_topDescription {
+      display: none;
+    }
+    &_col {
+      display: block;
+      height: auto;
+      width: 100%;
+      padding: 7px 10px 0;
+      text-align: center;
+      &Title {
+        display: block;
+        width: 100%;
+        margin-bottom: 9px;
+        font-size: 13px;
+        text-align: center;
+      }
+      &ImgBox {
+        display: inline-block;
+        height: 57px;
+        width: 57px;
+        margin: 0 8px;
+      }
+      &Link {
+        padding: 2px 0;
+      }
+      &Img {
+        height: 53px;
+        max-width: 53px;
+      }
+      &SearchBox {
+        display: none;
+      }
+    }
+    &_colSide {
+      display: none;
+    }
+    &_imgBox {
+      display: block;
+      height: 251px;
+      width: 100%;
+      padding: 18px 0 0;
+    }
+    &_img {
+      height: 233px;
+      max-width: 233px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 379px) {
+  .overview {
+    &_root {
+      margin: 0 -10px;
+      padding: 20px 10px;
+    }
+    &_articleBox {
+      padding: 0 10px;
+    }
+  }
+}

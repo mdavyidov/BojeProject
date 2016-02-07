@@ -1,0 +1,334 @@
+.offer {
+  &_root {
+    width: 100%;
+    text-align: justify;
+    font-size: 0;
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: top;
+    }
+  }
+  &_border {
+    position: absolute;
+    height: 268px;
+    width: 671px;
+    margin: 21px;
+    border: 1px solid #d2e9e9;
+    box-shadow: inset 0 0 1px 1px rgba(185, 222, 221, 0.31), 0 0 1px 1px rgba(189, 222, 221, 0.31);
+  }
+  &_sectionDouble {
+    display: inline-block;
+    position: relative;
+    height: 312px;
+    width: 715px;
+    border-radius: 3px;
+    text-align: left;
+    vertical-align: top;
+    background: url('../../images/DoubleShares.png') no-repeat;
+  }
+  &_contentDouble {
+    position: relative;
+    margin: 75px 0 0 61px;
+    .offer_title {
+      font-size: 28px;
+      width: 292px;
+      height: 73px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    .offer_description {
+      font-size: 14px;
+      line-height: 1.3;
+      color: #656565;
+      width: 295px;
+      height: 46px;
+      font-weight: 400;
+    }
+    .offer_subscription {
+      width: 480px;
+      input {
+        display: inline-block;
+        width: 170px;
+        height: 40px;
+        margin-right: 20px;
+        font-weight: 700;
+        text-align: left;
+        cursor: text;
+        &::-webkit-input-placeholder {
+          text-align: center;
+        }
+        &:-moz-placeholder {
+          direction: rtl;
+        }
+        &::-moz-placeholder {
+          direction: rtl;
+        }
+        &:-ms-input-placeholder {
+          direction: rtl;
+        }
+
+      }
+      button.offer_min.btn.btn_primary {
+        display: none;
+      }
+    }
+  }
+  &_section {
+    height: 312px;
+    width: 455px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: left;
+    vertical-align: top;
+    background: url('../../images/sectionShares.png') no-repeat;
+  }
+  &_content {
+    text-align: left;
+    margin: 66px 0 0 51px;
+    .offer_title {
+      height: 106px;
+      width: 252px;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #ffffff;
+      margin-bottom: 26px;
+      font-weight: 800;
+    }
+  }
+}
+
+
+@media (min-width: 1020px) and (max-width: 1299px) {
+  .offer {
+    &_border {
+      display: none;
+    }
+    &_sectionDouble {
+      width: 545px;
+      background: url('../../images/DoubleShares980.png') no-repeat;
+    }
+    &_contentDouble {
+      width: auto;
+      height: auto;
+      margin: 75px 0 0 51px;
+      border: none;
+      box-shadow: none;
+      .offer_title {
+        font-size: 28px;
+        width: 292px;
+        height: 73px;
+        margin: 0 0 7px 0;
+      }
+      .offer_subscription {
+        width: 420px;
+        input {
+          width: 160px;
+          margin: 0 20px 0 0;
+        }
+        button.btn.btn_primary {
+          margin-left: 0;
+          width: 60px;
+        }
+      }
+    }
+    &_section {
+      width: 415px;
+      background: url('../../images/sectionShares980.png') no-repeat;
+    }
+    &_content {
+      .offer_title {
+        height: 110px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .offer {
+    &_root {
+      width: auto;
+      margin: 0 -25px;
+      padding-bottom: 0;
+      text-align: center;
+      &:after {
+        display: none;
+      }
+    }
+    &_border {
+      display: none;
+    }
+    &_sectionDouble {
+      height: 284px;
+      width: 50%;
+      border-radius: 0;
+      margin-left: -25px;
+      background: url('../../images/DoubleShares768.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentDouble {
+      width: auto;
+      height: auto;
+      margin: 37px 0 0 41px;
+      border: none;
+      box-shadow: none;
+      .offer_title {
+        font-size: 22px;
+        width: 230px;
+        height: 75px;
+        margin: 0;
+      }
+      .offer_description {
+        font-size: 17px;
+        width: 145px;
+        height: 92px;
+      }
+      .offer_subscription {
+        width: auto;
+        input {
+          display: none;
+        }
+        button.btn.btn_primary {
+          display: none;
+        }
+        button.offer_min.btn.btn_primary {
+          display: block;
+          margin-left: 0;
+          font-size: 17px;
+          border-radius: 4px;
+          line-height: 40px;
+          height: 43px;
+        }
+      }
+    }
+    &_section {
+      height: 284px;
+      width: 50%;
+      border-radius: 0;
+      margin-right: -25px;
+      background: url('../../images/sectionShares768.png') no-repeat;
+      background-size: cover;
+    }
+    &_content {
+      margin: 70px 0 0 41px;
+      .offer_title {
+        height: 95px;
+        width: 198px;
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      button.btn.btn_secondary {
+        display: block;
+        margin-left: 0;
+        font-size: 17px;
+        border-radius: 4px;
+        line-height: 40px;
+        height: 43px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .offer {
+    &_root {
+      text-align: center;
+      margin: 0 0 10px;
+      padding-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &_border {
+      display: none;
+    }
+    ._root {
+      margin-top: 0;
+      padding-bottom: 10px;
+      background: #f3f3f3;
+    }
+    &_sectionDouble {
+      height: 200px;
+      width: 100%;
+      border-radius: 6px;
+      margin: 0 0 10px;
+      background: #f1f1f1 url('../../images/DoubleShares320.png') no-repeat;
+      background-size: cover;
+    }
+    &_contentDouble {
+      width: auto;
+      height: auto;
+      margin: 19px 0 0 25px;
+      border: none;
+      box-shadow: none;
+      .offer_title {
+        font-size: 15px;
+        width: 157px;
+        height: 45px;
+        line-height: 1.54;
+        margin: 0 0 3px;
+      }
+      .offer_description {
+        font-size: 13px;
+        width: 156px;
+        height: 48px;
+        line-height: 1.4;
+        margin: 0 0 4px;
+      }
+      .offer_subscription {
+        width: auto;
+        input {
+          display: none;
+        }
+        button.btn.btn_primary {
+          display: none;
+        }
+        button.offer_min.btn.btn_primary {
+          display: block;
+          margin-left: 0;
+          font-size: 13px;
+          border-radius: 4px;
+          line-height: 28px;
+          height: 35px;
+          padding: 0 18px;
+        }
+      }
+    }
+    &_section {
+      height: 200px;
+      width: 100%;
+      border-radius: 6px;
+      margin: 0 0 10px;
+      background: #50c4cd url('../../images/sectionShares320.png') no-repeat;
+      background-size: cover;
+    }
+    &_content {
+      margin: 19px 0 0 24px;
+      .offer_title {
+        height: 64px;
+        width: 136px;
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+      button.btn.btn_secondary {
+        display: block;
+        margin-left: 0;
+        font-size: 13px;
+        border-radius: 4px;
+        line-height: 28px;
+        padding: 0 18px;
+        height: 35px;
+      }
+    }
+  }
+}

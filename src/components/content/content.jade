@@ -1,0 +1,13 @@
+mixin content(hType, title)
+  section.content_root
+    if hType
+      .content_title
+        case hType
+          when 1
+            h1= title
+          when 2
+            h2= title
+          default
+            h3= title
+    .content_body
+      block

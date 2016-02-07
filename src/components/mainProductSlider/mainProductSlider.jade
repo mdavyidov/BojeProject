@@ -1,0 +1,18 @@
+mixin mainProductSlider_slide()
+  li.mainProductSlider_slide
+    .mainProductSlider_slideInner
+      include ../productItem/productItemBordered
+  li.mainProductSlider_slide
+    .mainProductSlider_slideInner
+      include ../productItem/productItemMark
+  li.mainProductSlider_slide
+    .mainProductSlider_slideInner
+      include ../productItem/productItemOldPrice
+
+            
+.mainProductSlider_root.baseSlider
+  .mainProductSlider_header Хиты продаж
+  .mainProductSlider_container
+    ul.mainProductSlider_list(data-slider="mainProductSlider")
+      +mainProductSlider_slide()
+      +mainProductSlider_slide()

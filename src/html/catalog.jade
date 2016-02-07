@@ -1,0 +1,41 @@
+extends ../components/layout/basic
+
+block root
+  .shell_root
+    .shell_container.shell_containerDark
+      .shell_row
+        .shell_col
+          include ../components/nav/nav
+    .shell_container
+      .shell_row
+        .shell_col
+          include ../components/mainHeader/mainHeader
+    .shell_container.shell_containerLight
+      .shell_row
+        .shell_col
+          include ../components/productSearch/productSearch
+      .shell_row
+        .shell_col
+          include ../components/breadcrumbs/breadcrumbs
+      .shell_row
+        .shell_col
+          include ../components/prodTitle/prodTitle
+    .shell_container.shell_nav.shell_containerLight
+      .shell_row
+        .shell_col_nav
+          include ../components/sidebar/sidebar
+        .shell_col
+          script.
+            function handleCick() {
+              document.body.className = document.body.className === 'menuActive' ? '' : 'menuActive';
+            }
+          include ../components/productList/productList
+          include ../components/pagination/pagination
+  .shell_rootFooter
+    .shell_container.shell_containerDark
+      .shell_row
+        .shell_col
+          include ../components/footerInfo/footerInfo
+      .shell_row
+        .shell_col
+          include ../components/footer/footer

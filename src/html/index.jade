@@ -1,0 +1,60 @@
+extends ../components/layout/basic
+
+block root
+  .shell_root
+    .shell_container.shell_containerDark
+      .shell_row
+        .shell_col
+          include ../components/nav/nav
+    .shell_container
+      .shell_row
+        .shell_col
+          include ../components/mainHeader/mainHeader
+    .shell_container.shell_containerLight
+      .shell_row
+        .shell_col
+          include ../components/productSearch/productSearch
+    .shell_container.shell_containerLight
+      include ../components/mainSlider/mainSlider
+    .shell_container.shell_containerLight
+      .shell_row.shell_rowLine
+        .shell_col
+          include ../components/filterBlock/filterBlock
+      .shell_row
+        .shell_col
+          include ../components/sample/sample
+    .shell_container.shell_containerLight
+      .shell_row
+        .shell_col
+          include ../components/mainProductSlider/mainProductSlider
+    .shell_container
+      .shell_row
+        .shell_col
+          include ../components/offer/offer
+      .shell_row
+        .shell_col.shell_rowLine
+          h1 Ювелирный дом «Боже»
+          p.
+            Несмотря на то, что наш магазин основан в 2010 году, с нами спешат сотрудничать практически все известные
+            производители России и многие западные ювелирные бренды. Так, сегодня на витринах ювелирного дома «Божэ» выставлен
+            максимально широкий и разнообразный ассортимент золотых и серебряных украшений. Свою продукцию представляют лучшие
+            ювелирные компании: «Эталон Стиль», Zanсan, экстравагантный бренд авторского ювелирного дизайна «Кабирски», «Style
+            Avenue» (Чехия), «Пятый сезон», « Галерея благолепия», «Алмосс», «Арт-модерн», «Алькольм Ювелир», «Легенда», «Арт
+            Фацет», МЭЮЗ, ЮСС, Rebecca, Sauro и многие другие.
+          p
+            b.
+              Мы с полной уверенностью заявляем: Ювелирный Дом «Божэ» - гуру в вопросах презентации украшений. Мы - лучшие.
+              Свидетельство тому – диплом и награда, по праву завоеванные на Всероссийском конкурсе
+            =' '
+            span.text-bg «Лучший ювелирный дом России».
+      .shell_row
+        .shell_col
+          include ../components/features/features
+  .shell_rootFooter
+    .shell_container.shell_containerDark
+      .shell_row
+        .shell_col
+          include ../components/footerInfo/footerInfo
+      .shell_row
+        .shell_col
+          include ../components/footer/footer

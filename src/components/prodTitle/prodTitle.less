@@ -1,0 +1,241 @@
+.prodTitle {
+  &_root {
+    position: relative;
+    padding: 22px 0 30px;
+    font-size: 0;
+  }
+  &_main {
+    display: inline-block;
+    vertical-align: top;
+    button {
+      display: none;
+    }
+  }
+  &_mainTitle {
+    display: inline-block;
+    width: 306px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.1;
+  }
+  &_category {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &_categoryTitle {
+    display: none;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  &_categoryBox {
+    position: relative;
+    font-size: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    .select {
+      display: none;
+    }
+  }
+  &_btn {
+    color: #b2b2b2;
+    background-color: #ebebeb;
+    border: 0;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
+    &:hover {
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
+    &Active {
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
+  }
+  &_filter {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    .select {
+      display: inline-block;
+      padding: 0 15px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+  &_filterTitle {
+    display: inline-block;
+    padding: 9px 20px 0;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1299px) {
+  .prodTitle {
+    &_mainTitle {
+      width: 250px;
+    }
+    &_filter {
+      .filterBlock_select {
+        width: 210px;
+      }
+      .select {
+        padding: 0;
+      }
+      select {
+        line-height: 38px;
+      }
+    }
+    &_filterTitle {
+      font-size: 15px;
+      padding: 10px 10px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .prodTitle {
+    &_root {
+      padding: 4px 0 30px;
+    }
+    &_main {
+      vertical-align: bottom;
+      button {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 0 35px;
+      }
+    }
+    &_mainTitle {
+      display: block;
+      width: 215px;
+      font-size: 35px;
+    }
+    &_category {
+      margin-right: 20px;
+      vertical-align: bottom;
+    }
+    &_categoryTitle {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &_categoryBox {
+      position: relative;
+      font-size: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      .btn {
+        display: none;
+      }
+      .select {
+        display: block;
+        width: 215px;
+        margin: 0;
+      }
+    }
+    &_filter {
+      float: none;
+      vertical-align: bottom;
+      .select {
+        width: 270px;
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+      }
+    }
+    &_filterTitle {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .prodTitle {
+    &_root {
+      padding: 6px 0 30px;
+    }
+    &_main {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dddddd;
+      vertical-align: bottom;
+      button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 0 35px;
+        font-size: 13px;
+      }
+    }
+    &_mainTitle {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+    }
+    &_category {
+      width: 48%;
+      margin-right: 4%;
+      vertical-align: bottom;
+    }
+    &_categoryTitle {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+    &_categoryBox {
+      position: relative;
+      font-size: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      .btn {
+        display: none;
+      }
+      .select {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+    &_filter {
+      width: 48%;
+      float: none;
+      vertical-align: bottom;
+      .select {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+      }
+    }
+    &_filterTitle {
+      display: block;
+      margin-bottom: 5px;
+      padding: 0;
+      font-size: 13px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 790px) {
+  .prodTitle {
+    &_filter {
+      float: none;
+      vertical-align: bottom;
+      .select {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+      }
+    }
+    &_filterTitle {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

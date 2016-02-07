@@ -1,0 +1,182 @@
+.gag {
+  width: 348px;
+  margin-left: 40%;
+}
+
+.ordering {
+  &_root {
+    padding: 30px 20px;
+    width: 348px;
+    background: #ffffff;
+    .btn.btn_primary {
+      padding: 0 65px;
+      margin-left: 20px;
+    }
+  }
+  &_product {
+  }
+  &_List {
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+  }
+  &_item {
+    height: 99px;
+    border-bottom: 1px solid #dddddd;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &_image {
+    width: 97px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    &Mark {
+      position: absolute;
+      text-align: center;
+      padding: 5px 0;
+      box-sizing: border-box;
+      height: 24px;
+      width: 40px;
+      top: 10px;
+      background: #ff000e;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 3px;
+      z-index: 2;
+    }
+    &Icon {
+      height: 100%;
+      max-width: 100%;
+      display: block;
+      margin: auto;
+      background-size: cover;
+      padding: 11px 10px;
+      z-index: 1;
+    }
+  }
+  &_description {
+    height: 100%;
+    display: inline-block;
+    margin-right: 6px;
+    width: 106px;
+    vertical-align: top;
+    &Name {
+      margin-top: 34px;
+      width: 100%;
+      font-size: 14px;
+      color: #333333;
+      font-weight: 700;
+    }
+    &Clarification {
+      margin-top: 4px;
+      line-height: 1.4;
+      width: 80px;
+      font-size: 13px;
+      color: #999999;
+      font-weight: 400;
+    }
+  }
+  &_value {
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    &Cost {
+      margin-top: 34px;
+      font-size: 16px;
+      color: #29acbe;
+      font-family: 'gothampro',sans-serif;
+      span {
+        font-size: 14px;
+        color: #29acbe;
+        font-family: 'alsrubl',sans-serif;
+      }
+    }
+    &OldCost {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #808080;
+      font-family: 'gothampro', sans-serif;
+      text-decoration: line-through;
+      span {
+        font-size: 12px;
+        color: #808080;
+        font-family: 'alsrubl', sans-serif;
+      }
+    }
+  }
+  &_statistics {
+    width: 268px;
+    margin: 30px 20px 40px 20px;
+    &Section {
+      height: 45px;
+      border-bottom: 1px solid #dddddd;
+      &:last-child {
+        border-bottom: none;
+      }
+      &Name {
+        display: inline-block;
+        width: 80px;
+        vertical-align: top;
+        margin-top: 16px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #808080;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      &Meaning{
+        width: 178px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 14px;
+        text-align: right;
+        padding-right: 8px;
+        box-sizing: border-box;
+        font-size: 17px;
+        font-weight: 700;
+        color: #333333;
+        span {
+          font-size: 14px;
+          color: #000;
+          font-family: 'alsrubl', sans-serif;
+        }
+      }
+    }
+  }
+  &_payment {
+    width: 268px;
+    margin: 5px 20px 30px 20px;
+    &Name {
+      display: inline-block;
+      width: 80px;
+      vertical-align: top;
+      margin-top: 16px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #808080;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+    &Cost {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 35px;
+      font-family: 'gothampro',sans-serif;
+      color: #29acbe;
+      span {
+        font-size: 30px;
+        color: #29acbe;
+        font-family: 'alsrubl', sans-serif;
+      }
+    }
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1299px) {}
+
+@media (min-width: 768px) and (max-width: 1019px) {}
+
+@media (max-width: 767px) {}

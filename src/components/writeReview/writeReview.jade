@@ -1,0 +1,39 @@
+.writeReview_root.blankForm
+  .writeReview_title Мой отзыв о VISCONTI ELEGANCE
+    .writeReview_hideBtn
+      a(href="#")
+
+  .message_root
+    .message_title Достоинства
+    textarea(placeholder="Что Вам понравилось").message_textarea
+  .message_root
+    .message_title Недостатки
+    textarea(placeholder="Что не понравилось").message_textarea
+  .message_root
+    .message_title Комментарий
+    textarea(placeholder="Другие впечатления о модели").message_textarea
+
+  .writeReview_submit
+    .ratingBar_root Ваша оценка
+      ul.ratingBar_marksLine
+        li.ratingBar_ch
+          a(href="#").ratingBar_link
+            .ratingBar_mark
+          .ratingBar_popup.blankForm 1
+        li.ratingBar_ch
+          a(href="#").ratingBar_link
+            .ratingBar_mark
+          .ratingBar_popup.blankForm 2
+        li.ratingBar_ch
+          a(href="#").ratingBar_link
+            .ratingBar_mark
+          .ratingBar_popup.blankForm 3
+        li.ratingBar_ch
+          a(href="#").ratingBar_link
+            .ratingBar_mark
+          .ratingBar_popup.blankForm 4
+        li.ratingBar_ch
+          a(href="#").ratingBar_link
+            .ratingBar_mark
+          .ratingBar_popup.blankForm 5
+    input(type="submit" value="Написать отзыв").btn.btn_primary.writeReview_submitBtn

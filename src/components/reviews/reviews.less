@@ -1,0 +1,282 @@
+.reviews {
+  &_root {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 30px 20px 0;
+    color: #333;
+  }
+  &_actionBtn {
+    position: absolute;
+    right: 40px;
+    top: 25px;
+  }
+  &_title {
+    padding: 0 20px;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+  &_number {
+    font-size: 18px;
+    color: #bfbfbf;
+    margin-left: 15px;
+  }
+  &_sorting {
+    padding: 0 20px;
+  }
+
+  &_unit {
+    padding: 28px 20px 26px;
+    border-top: solid 1px #dedede;
+  }
+  &_unitTop {
+    border-top: none;
+  }
+  &_revData {
+    position: relative;
+    line-height: 1;
+  }
+  &_username {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &_otherData {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+  &_revItem {
+    margin-top: 20px;
+  }
+  &_revItemTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #808080;
+  }
+  &_revItemValue {
+    margin-top: 8px;
+    line-height: 20px;
+  }
+  &_ratingBar {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &_marksLine {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &_mark {
+    display: inline-block;
+    margin: 0 3px;
+    .sprite(@rating-star-hover);
+    &Hidden {
+      display: none;
+    }
+  }
+}
+
+.sorting {
+  &_root {
+    line-height: 29px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #bfbfbf;
+  }
+  &_text {
+    padding-right: 10px;
+    display: inline-block;
+  }
+  &_type {
+    display: inline-block;
+    border-radius: 4px;
+    border: solid 1px transparent;
+    box-sizing: border-box;
+    &Active {
+      position: relative;
+      border-color: #bfbfbf;
+      &:before {
+        content: '';
+        position: absolute;
+        right: 9px;
+        top: 50%;
+        margin-top: -4px;
+        .sprite(@sort-bars);
+      }
+      .sorting_link {
+        padding-right: 20px;
+        color: #808080;
+        span {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &_link {
+    display: inline-block;
+    height: 29px;
+    padding: 0 10px;
+    color: #48e6d2;
+    text-decoration: none;
+    span {
+      border-bottom: 2px dotted #48e6d2;
+    }
+  }
+}
+
+
+@media (min-width: 1020px) and (max-width: 1300px) {        /*========== 1020 ===== 1299 ==========*/
+  .reviews {
+    &_title, &_sorting {
+      padding: 0 10px;
+    }
+    &_unit {
+      padding: 28px 10px 26px;
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1019px) {       /*========== 768 ===== 1019 ==========*/
+  .reviews {
+    &_root {
+      margin: 0 -25px 30px;
+      padding: 40px 25px 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    &_actionBtn {
+      position: absolute;
+      right: 16px;
+      top: 40px;
+    }
+    &_title {
+      font-size: 35px;
+    }
+    &_number {
+      font-size: 25px;
+      margin-left: 19px;
+    }
+    &_unit {
+      padding: 38px 20px 36px;
+    }
+    &_username {
+      font-size: 23px;
+    }
+    &_otherData {
+      font-size: 15px;
+    }
+    &_ratingBar {
+      right: -20px;
+    }
+    &_revItem {
+      margin-top: 17px;
+    }
+    &_revItemTitle {
+      font-size: 17px;
+    }
+    &_revItemValue {
+      font-size: 17px;
+      line-height: 25px;
+    }
+    &_mark {
+      margin: 0 4px;
+      .sprite(@rating-star-big-hover);
+      &Hidden {
+        display: none;
+      }
+    }
+  }
+
+  .sorting {
+    &_root {
+      line-height: 40px;
+      font-size: 17px;
+    }
+    &_text {
+      padding-right: 14px;
+    }
+    &_link {
+      height: 40px;
+      padding: 0 15px;
+    }
+    &_type {
+      &Active {
+        &:before {
+          right: 11px;
+          top: 50%;
+          margin-top: -6px;
+          .sprite(@sort-bars-big);
+        }
+        .sorting_link {
+          padding-right: 32px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {       /*=============== 767 ===============*/
+  .reviews {
+    &_root {
+      margin: 0 -10px 30px;
+      padding: 20px 10px 10px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    &_actionBtn {
+      display: none;
+    }
+    &_title {
+      padding: 0;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &_number {
+      font-size: 15px;
+      margin-left: 9px;
+    }
+    &_sorting {
+      padding: 0;
+    }
+    &_unit {
+      padding: 20px 0 16px;
+    }
+    &_username {
+      font-size: 17px;
+    }
+    &_otherData {
+      font-size: 14px;
+    }
+    &_revItem {
+      margin-top: 13px;
+    }
+    &_revItemTitle {
+      font-size: 13px;
+    }
+    &_revItemValue {
+      margin-top: 3px;
+    }
+    &_mark {
+      &Hidden {
+        display: none;
+      }
+    }
+  }
+
+  .sorting {
+    &_root {
+      line-height: 35px;
+    }
+    &_text {
+      padding-right: 12px;
+    }
+    &_link {
+      height: 35px;
+    }
+  }
+}

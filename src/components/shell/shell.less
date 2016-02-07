@@ -1,0 +1,198 @@
+.shell_ {
+  &root {
+    position: relative;
+    min-height: 100%;
+    min-width: 320px;
+    margin-bottom: -352px;
+    overflow: hidden;
+    &:after {
+      content: '';
+      display: block;
+      height: 352px;
+    }
+    &Footer {
+      position: relative;
+      min-width: 320px;
+      overflow: hidden;
+    }
+  }
+  &container {
+    background: #fff;
+    position: relative;
+    &Dark {
+      background: #333;
+      color: #a6a6a6;
+    }
+    &Light {
+      background: #f3f3f3;
+    }
+  }
+  &row {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    left: 0;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    &Line {
+      border-top: 1px solid #ddd;
+    }
+  }
+  &containerDark &rowLine {
+    border-top: 1px solid #4d4d4d;
+  }
+  &nav {
+    z-index: 2;
+  }
+  &nav &col {
+    margin-left: 310px;
+  }
+  &nav &col_nav {
+    width: 278px;
+    float: left;
+  }
+  &rSide &col {
+    margin-right: 378px;
+  }
+  &rSide &col_rSide {
+    width: 348px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 1299px) {
+  .shell_ {
+    &root {
+      margin-bottom: -477px;
+      &:after {
+        height: 477px;
+      }
+    }
+    &row {
+      width: 980px;
+    }
+    &nav &col {
+      margin-left: 252px;
+    }
+    &nav &col_nav {
+      width: 230px;
+      float: left;
+    }
+    &rSide &col {
+      margin-right: 328px;
+    }
+    &rSide &col_rSide {
+      width: 308px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .shell_ {
+    &root {
+      margin-bottom: -610px;
+      &:after {
+        height: 610px;
+      }
+    }
+    &container {
+      padding: 0 25px;
+    }
+    &row {
+      width: 100%;
+      transition: left .2s;
+    }
+    &nav &col {
+      margin-left: 0;
+    }
+    &nav &col_nav {
+      transition: left .2s;
+      position: fixed;
+      width: 522px;
+      left: -522px;
+      top: 0;
+      bottom: 0;
+      float: none;
+    }
+    .menuActive &nav &col_nav {
+      left: 0;
+    }
+    .menuActive &row {
+      left: 522px;
+    }
+    &rSide &col {
+      margin-right: 0;
+    }
+    &rSide &col_rSide {
+      width: auto;
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .shell_ {
+    &root {
+      margin-bottom: -538px;
+      &:after {
+        height: 538px;
+      }
+    }
+    &container {
+      padding: 0 10px;
+    }
+    &nav &col_nav {
+      width: 264px;
+      left: -264px;
+      top: 0;
+      bottom: 0;
+      float: none;
+    }
+    .menuActive &row {
+      left: 264px;
+    }
+    &rSide &col {
+      margin-right: 0;
+    }
+    &rSide &col_rSide {
+      width: auto;
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .shell_ {
+    &root {
+      margin-bottom: -693px;
+      &:after {
+        height: 693px;
+      }
+    }
+  }
+}
+
+@media (max-width: 509px) {
+  .shell_ {
+    &root {
+      margin-bottom: -826px;
+      &:after {
+        height: 826px;
+      }
+    }
+  }
+}
+
+.foo_navigation {
+  border: 10px solid #333;
+  background: #960;
+  height: 400px;
+}

@@ -1,0 +1,21 @@
+
+
+.prodSearch
+  a(href="#").btn.btn_primary.prodSearch_btn
+    span.icoBars
+    |Каталог товаров
+  =' '
+  a(href="#").btn.btn_danger.prodSearch_btn
+    span.icoPct %
+    |Акции
+  =' '
+  a(href="#").btn.btn_warning.prodSearch_btn
+    span.icoStar
+    |Хиты продаж
+  =' '
+  .searchBar.blankForm
+    input(
+    type="text"
+    placeholder="Поиск по каталогу"
+    )
+    button(type="submit")

@@ -1,0 +1,22 @@
+.prodTitle_root
+  .prodTitle_main
+    .prodTitle_mainTitle Серьги
+    button(onclick="handleCick()").btn.btn_primary Фильтры
+  .prodTitle_category
+    .prodTitle_categoryTitle Для кого
+    .prodTitle_categoryBox
+      button.btn.prodTitle_btn Для женщин
+      button.btn.prodTitle_btn.prodTitle_btnActive Для мужчин
+      button.btn.prodTitle_btn Для детей
+      .select.filterBlock_select.blankForm
+        select(name="decorations")
+          option(value="all") Для мужчин
+          option(value="1") Для женщин
+          option(value="2") Для детей
+  .prodTitle_filter
+    .prodTitle_filterTitle Сортировка
+    .select.filterBlock_select.blankForm
+      select(name="decorations")
+        option(value="all") по возрастанию цены
+        option(value="1") по убыванию цены
+        option(value="2") новинки

@@ -1,0 +1,222 @@
+.productItem_ {
+  &root {
+    background: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px fade(#000, 10%);
+    border-radius: 5px;
+  }
+  &bordered {
+    border: 1px solid #dedede;
+    box-shadow: none;
+  }
+  &top {
+    position: relative;
+    padding: 12px 20px 0;
+  }
+  &article {
+    color: #bfbfbf;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  &mark {
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    width: 40px;
+    top: 9px;
+    right: 20px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 5;
+  }
+  &markDiscount {
+    background: #ff000e;
+    color: #ffffff;
+  }
+  &markHit {
+    background: #fff000;
+    color: #1a1a1a;
+  }
+  &link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #999;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 20px 10px;
+  }
+  &picture {
+    text-align: center;
+    margin: 0 0 5px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  &title {
+    margin: 0 0 2px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  &content {
+    min-height: 24px;
+  }
+  &priceBox {
+    margin: 10px 0 0;
+  }
+  &price {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1a1a1a;
+    font-weight: bold;
+    span {
+      font-size: 20px;
+      color: #333333;
+      margin-left: 5px;
+      font-family: 'alsrubl', sans-serif;
+    }
+  }
+  &oldPraice {
+    display: inline-block;
+    font-size: 14px;
+    color: #808080;
+    font-family: 'gothampro', sans-serif;
+    padding-right: 5px;
+    text-decoration: line-through;
+    span {
+      display: none;
+      font-size: 12px;
+      color: #808080;
+      margin-left: 3px;
+      font-family: 'alsrubl', sans-serif;
+      text-decoration: line-through;
+    }
+  }
+  &action {
+    padding: 12px 20px 30px;
+    & .btn:hover {
+      background: #29acbe;
+      color: #fff;
+    }
+  }
+  &linkCard {
+    padding: 10px 20px 25px;
+    .productItem {
+      &_price {
+        font-family: 'gothampro', sans-serif;
+        font-weight: 400;
+      }
+      &_description {
+        font-weight: 400;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .productItem_ {
+    &article {
+      font-size: 14px;
+    }
+    &mark {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    &linkCard {
+      padding: 10px 20px 25px;
+      .productItem {
+        &_price {
+          font-size: 27px;
+          span {
+            font-size: 23px;
+          }
+        }
+        &_description {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .productItem_ {
+    &adaptiveSmall {
+      margin: 0 -15px;
+      border: none;
+      border-top: 1px solid #e6e6e6;
+      box-sizing: border-box;
+      box-shadow: none;
+      border-radius: 0;
+      & .productItem_top {
+        padding-top: 16px;
+      }
+      & .productItem_link {
+        overflow: hidden;
+        padding-right: 20px;
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 50%;
+          right: 15px;
+          margin-top: -@illustrationsbtn-secondary-height/2;
+          .sprite(@illustrationsbtn-secondary);
+        }
+      }
+      & .productItem_title {
+        font-size: 14px;
+        margin: 12px 0 2px;
+      }
+      & .productItem_price {
+        margin: 2px 0 0;
+        font-size: 17px;
+        span {
+          font-size: 14px;
+        }
+      }
+      & .productItem_picture {
+        float: left;
+        width: 100px;
+        & img {
+          max-width: 100px;
+          height: 84px;
+          vertical-align: top;
+        }
+      }
+      & .productItem_content {
+        margin: 0 0 0 120px;
+      }
+      & .productItem_action {
+        padding-left: 140px;
+        padding-top: 0;
+      }
+    }
+    &linkCard {
+      padding: 10px 20px 25px;
+      .productItem {
+        &_price {
+          font-size: 17px;
+          span {
+            font-size: 14px;
+          }
+        }
+        &_description {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
